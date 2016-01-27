@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C8C5FCD1DEA22A09ED69E2D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06B779FF2F77A08A2704F9C0 /* libPods.a */; };
 		93933F701C515F6E0029510E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93933F6F1C515F6E0029510E /* main.m */; };
 		93933F731C515F6E0029510E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93933F721C515F6E0029510E /* AppDelegate.m */; };
 		93933F761C515F6E0029510E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93933F751C515F6E0029510E /* ViewController.m */; };
@@ -36,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06B779FF2F77A08A2704F9C0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		39616FB16857AC12AA46CC72 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		6316AA759C149E74AE3D12D2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		93933F6B1C515F6E0029510E /* TeamR_RealTimeDisplay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamR_RealTimeDisplay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93933F6F1C515F6E0029510E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		93933F711C515F6E0029510E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -60,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C8C5FCD1DEA22A09ED69E2D /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +85,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A139D4DB3B00EB761911FA2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06B779FF2F77A08A2704F9C0 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		93933F621C515F6E0029510E = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +100,8 @@
 				93933F8A1C515F6E0029510E /* TeamR_RealTimeDisplayTests */,
 				93933F951C515F6E0029510E /* TeamR_RealTimeDisplayUITests */,
 				93933F6C1C515F6E0029510E /* Products */,
+				E42B343B2DD5D18077B9AAD6 /* Pods */,
+				7A139D4DB3B00EB761911FA2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,6 +158,15 @@
 			path = TeamR_RealTimeDisplayUITests;
 			sourceTree = "<group>";
 		};
+		E42B343B2DD5D18077B9AAD6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				39616FB16857AC12AA46CC72 /* Pods.debug.xcconfig */,
+				6316AA759C149E74AE3D12D2 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,9 +174,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93933F9B1C515F6E0029510E /* Build configuration list for PBXNativeTarget "TeamR_RealTimeDisplay" */;
 			buildPhases = (
+				72A1363216AA7C44A050B1B0 /* Check Pods Manifest.lock */,
 				93933F671C515F6E0029510E /* Sources */,
 				93933F681C515F6E0029510E /* Frameworks */,
 				93933F691C515F6E0029510E /* Resources */,
+				BE7ED1E3CBA85A8035880FDA /* Embed Pods Frameworks */,
+				C27775E2D9E8135DA7F28C90 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -270,6 +297,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		72A1363216AA7C44A050B1B0 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BE7ED1E3CBA85A8035880FDA /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C27775E2D9E8135DA7F28C90 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		93933F671C515F6E0029510E /* Sources */ = {
@@ -418,6 +493,7 @@
 		};
 		93933F9C1C515F6E0029510E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39616FB16857AC12AA46CC72 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TeamR_RealTimeDisplay/Info.plist;
@@ -429,6 +505,7 @@
 		};
 		93933F9D1C515F6E0029510E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6316AA759C149E74AE3D12D2 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TeamR_RealTimeDisplay/Info.plist;
@@ -505,6 +582,7 @@
 				93933F9D1C515F6E0029510E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		93933F9E1C515F6E0029510E /* Build configuration list for PBXNativeTarget "TeamR_RealTimeDisplayTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +591,7 @@
 				93933FA01C515F6E0029510E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		93933FA11C515F6E0029510E /* Build configuration list for PBXNativeTarget "TeamR_RealTimeDisplayUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +600,7 @@
 				93933FA31C515F6E0029510E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
