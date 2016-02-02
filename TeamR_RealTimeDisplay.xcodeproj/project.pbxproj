@@ -93,6 +93,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9363AF6B1C600C7500125650 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				93933F771C515F6E0029510E /* Main.storyboard */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		9363AF6C1C600CAE00125650 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				93933F711C515F6E0029510E /* AppDelegate.h */,
+				93933F721C515F6E0029510E /* AppDelegate.m */,
+				93933F741C515F6E0029510E /* ViewController.h */,
+				93933F751C515F6E0029510E /* ViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		93933F621C515F6E0029510E = {
 			isa = PBXGroup;
 			children = (
@@ -118,11 +137,8 @@
 		93933F6D1C515F6E0029510E /* TeamR_RealTimeDisplay */ = {
 			isa = PBXGroup;
 			children = (
-				93933F711C515F6E0029510E /* AppDelegate.h */,
-				93933F721C515F6E0029510E /* AppDelegate.m */,
-				93933F741C515F6E0029510E /* ViewController.h */,
-				93933F751C515F6E0029510E /* ViewController.m */,
-				93933F771C515F6E0029510E /* Main.storyboard */,
+				9363AF6C1C600CAE00125650 /* Controller */,
+				9363AF6B1C600C7500125650 /* view */,
 				93933F7D1C515F6E0029510E /* Assets.xcassets */,
 				93933F7F1C515F6E0029510E /* LaunchScreen.storyboard */,
 				93933F821C515F6E0029510E /* Info.plist */,
