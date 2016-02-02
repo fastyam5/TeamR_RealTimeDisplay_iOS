@@ -20,6 +20,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    ////////////////////////////////////////////////////////////////////
+    //DATABASE
+    //Assets ( ID Location(gps) Type title Department group status goal)
+    ////////////////////////////////////////////////////////////////////
     // Do any additional setup after loading the view, typically from a nib.
     // Create a GMSCameraPosition that tells the map to display the
     // coordinate -33.86,151.20 at zoom level 6.
