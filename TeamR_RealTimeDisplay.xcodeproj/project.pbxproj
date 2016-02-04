@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3C8C5FCD1DEA22A09ED69E2D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06B779FF2F77A08A2704F9C0 /* libPods.a */; };
+		934DFC401C63946600AC3A0A /* CBAutoScrollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 934DFC3F1C63946600AC3A0A /* CBAutoScrollLabel.m */; };
 		93933F701C515F6E0029510E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93933F6F1C515F6E0029510E /* main.m */; };
 		93933F731C515F6E0029510E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93933F721C515F6E0029510E /* AppDelegate.m */; };
 		93933F761C515F6E0029510E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93933F751C515F6E0029510E /* ViewController.m */; };
@@ -40,6 +41,8 @@
 		06B779FF2F77A08A2704F9C0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		39616FB16857AC12AA46CC72 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6316AA759C149E74AE3D12D2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		934DFC3E1C63946600AC3A0A /* CBAutoScrollLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBAutoScrollLabel.h; sourceTree = "<group>"; };
+		934DFC3F1C63946600AC3A0A /* CBAutoScrollLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBAutoScrollLabel.m; sourceTree = "<group>"; };
 		93933F6B1C515F6E0029510E /* TeamR_RealTimeDisplay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamR_RealTimeDisplay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93933F6F1C515F6E0029510E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		93933F711C515F6E0029510E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -137,6 +140,8 @@
 		93933F6D1C515F6E0029510E /* TeamR_RealTimeDisplay */ = {
 			isa = PBXGroup;
 			children = (
+				934DFC3E1C63946600AC3A0A /* CBAutoScrollLabel.h */,
+				934DFC3F1C63946600AC3A0A /* CBAutoScrollLabel.m */,
 				9363AF6C1C600CAE00125650 /* Controller */,
 				9363AF6B1C600C7500125650 /* view */,
 				93933F7D1C515F6E0029510E /* Assets.xcassets */,
@@ -371,6 +376,7 @@
 				93933F731C515F6E0029510E /* AppDelegate.m in Sources */,
 				93933F701C515F6E0029510E /* main.m in Sources */,
 				93933F7C1C515F6E0029510E /* TeamR_RealTimeDisplay.xcdatamodeld in Sources */,
+				934DFC401C63946600AC3A0A /* CBAutoScrollLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

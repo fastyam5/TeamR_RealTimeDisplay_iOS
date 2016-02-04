@@ -7,12 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CBAutoScrollLabel.h"
 @import GoogleMaps;
 
 @interface ViewController : UIViewController
 
-
 @property (strong, nonatomic) IBOutlet GMSMapView *mapView;
+
+@property (weak, nonatomic) IBOutlet CBAutoScrollLabel *urgentMessage;
+
+
 
 
 @end

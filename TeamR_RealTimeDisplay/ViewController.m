@@ -7,7 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "CBAutoScrollLabel.h"
 @import GoogleMaps;
+
 
 @interface ViewController ()
 
@@ -40,26 +42,16 @@
     marker.title = @"Dayton";
     marker.snippet = @"Ohio";
     marker.map = self.mapView;
-   
     
-    
-//    //Controls whether the My Location dot and accuracy circle is enabled.
-//    
-//    self.mapView.myLocationEnabled = YES;
-//    
-//    //Controls the type of map tiles that should be displayed.
-//    
-//    self.mapView.mapType = kGMSTypeNormal;
-//    
-//    //Shows the my location button on the map
-//    
-//    self.mapView.settings.myLocationButton = YES;
-//    
-//    //Sets the view controller to be the GMSMapView delegate
-//    
-//    self.mapView.delegate = self;
-//
-   
+    // Code to make text scroll in the urgent message when message is to long
+    self.urgentMessage.textColor = [UIColor whiteColor];
+    self.urgentMessage.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.5];
+    self.urgentMessage.textAlignment = NSTextAlignmentCenter;
+    self.urgentMessage.font = [UIFont boldSystemFontOfSize:16];
+    self.urgentMessage.pauseInterval = 2;
+    self.urgentMessage.fadeLength = 0;
+    self.urgentMessage.text = @"Urgent Messages: This is a test to verify that auto scrolling is working correctly";
+    [self.urgentMessage observeApplicationNotifications];
 
 }
 
