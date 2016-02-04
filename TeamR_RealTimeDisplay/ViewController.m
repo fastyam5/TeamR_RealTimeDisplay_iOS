@@ -44,10 +44,10 @@
     marker.map = self.mapView;
     
     // Code to make text scroll in the urgent message when message is to long
-    self.urgentMessage.textColor = [UIColor whiteColor];
-    self.urgentMessage.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.5];
+    self.urgentMessage.textColor = [UIColor blackColor];
+    self.urgentMessage.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.0];
     self.urgentMessage.textAlignment = NSTextAlignmentCenter;
-    self.urgentMessage.font = [UIFont boldSystemFontOfSize:16];
+    self.urgentMessage.font = [UIFont boldSystemFontOfSize:18];
     self.urgentMessage.pauseInterval = 2;
     self.urgentMessage.fadeLength = 0;
     self.urgentMessage.text = @"Urgent Messages: This is a test to verify that auto scrolling is working correctly";

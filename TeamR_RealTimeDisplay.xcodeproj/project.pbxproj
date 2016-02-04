@@ -18,6 +18,7 @@
 		93933F811C515F6E0029510E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93933F7F1C515F6E0029510E /* LaunchScreen.storyboard */; };
 		93933F8C1C515F6E0029510E /* TeamR_RealTimeDisplayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93933F8B1C515F6E0029510E /* TeamR_RealTimeDisplayTests.m */; };
 		93933F971C515F6E0029510E /* TeamR_RealTimeDisplayUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93933F961C515F6E0029510E /* TeamR_RealTimeDisplayUITests.m */; };
+		93D605BD1C640F9D00E82DAD /* reveal-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93D605BC1C640F9D00E82DAD /* reveal-icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		93933F921C515F6E0029510E /* TeamR_RealTimeDisplayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeamR_RealTimeDisplayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93933F961C515F6E0029510E /* TeamR_RealTimeDisplayUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeamR_RealTimeDisplayUITests.m; sourceTree = "<group>"; };
 		93933F981C515F6E0029510E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93D605BC1C640F9D00E82DAD /* reveal-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reveal-icon.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 		93933F6E1C515F6E0029510E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				93D605BC1C640F9D00E82DAD /* reveal-icon.png */,
 				93933F6F1C515F6E0029510E /* main.m */,
 			);
 			name = "Supporting Files";
@@ -300,6 +303,7 @@
 				93933F811C515F6E0029510E /* LaunchScreen.storyboard in Resources */,
 				93933F7E1C515F6E0029510E /* Assets.xcassets in Resources */,
 				93933F791C515F6E0029510E /* Main.storyboard in Resources */,
+				93D605BD1C640F9D00E82DAD /* reveal-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
