@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "CBAutoScrollLabel.h"
+#import "SWRevealViewController.h"
 @import GoogleMaps;
 
 
@@ -29,8 +30,8 @@
     // Do any additional setup after loading the view, typically from a nib.
     // Create a GMSCameraPosition that tells the map to display the
     // coordinate -33.86,151.20 at zoom level 6.
-    // GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:39.7633 longitude:-84.1911 zoom:6];
-    // self.mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:39.7633 longitude:-84.1911 zoom:6];
+    self.mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
     self.mapView.myLocationEnabled = YES;
     self.mapView.settings.compassButton = YES;
     self.mapView.settings.myLocationButton = YES;
@@ -48,12 +49,25 @@
     self.urgentMessage.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.0];
     self.urgentMessage.textAlignment = NSTextAlignmentCenter;
     self.urgentMessage.font = [UIFont boldSystemFontOfSize:18];
-    self.urgentMessage.pauseInterval = 2;
+    self.urgentMessage.pauseInterval = 1.5;
     self.urgentMessage.fadeLength = 0;
     self.urgentMessage.text = @"Urgent Messages: This is a test to verify that auto scrolling is working correctly";
     [self.urgentMessage observeApplicationNotifications];
+    [self customSetup];
 
 }
+
+- (void)customSetup
+{
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        [self.barButton setTarget: self.revealViewController];
+        [self.barButton setAction: @selector( revealToggle: )];
+        [self.navigationController.navigationBar addGestureRecognizer: self.revealViewController.panGestureRecognizer];
+    }
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

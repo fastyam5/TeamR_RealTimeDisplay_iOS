@@ -18,6 +18,8 @@
 		93933F811C515F6E0029510E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93933F7F1C515F6E0029510E /* LaunchScreen.storyboard */; };
 		93933F8C1C515F6E0029510E /* TeamR_RealTimeDisplayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93933F8B1C515F6E0029510E /* TeamR_RealTimeDisplayTests.m */; };
 		93933F971C515F6E0029510E /* TeamR_RealTimeDisplayUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93933F961C515F6E0029510E /* TeamR_RealTimeDisplayUITests.m */; };
+		93C30D571C643100001CF279 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C30D561C643100001CF279 /* SWRevealViewController.m */; };
+		93C30D591C643160001CF279 /* MenuViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C30D581C643160001CF279 /* MenuViewcontroller.m */; };
 		93D605BD1C640F9D00E82DAD /* reveal-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93D605BC1C640F9D00E82DAD /* reveal-icon.png */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,10 @@
 		93933F921C515F6E0029510E /* TeamR_RealTimeDisplayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeamR_RealTimeDisplayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93933F961C515F6E0029510E /* TeamR_RealTimeDisplayUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeamR_RealTimeDisplayUITests.m; sourceTree = "<group>"; };
 		93933F981C515F6E0029510E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93C30D551C643100001CF279 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		93C30D561C643100001CF279 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		93C30D581C643160001CF279 /* MenuViewcontroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewcontroller.m; sourceTree = "<group>"; };
+		93C30D5A1C64317C001CF279 /* MenuViewcontroller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuViewcontroller.h; sourceTree = "<group>"; };
 		93D605BC1C640F9D00E82DAD /* reveal-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reveal-icon.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +119,8 @@
 				93933F721C515F6E0029510E /* AppDelegate.m */,
 				93933F741C515F6E0029510E /* ViewController.h */,
 				93933F751C515F6E0029510E /* ViewController.m */,
+				93C30D5A1C64317C001CF279 /* MenuViewcontroller.h */,
+				93C30D581C643160001CF279 /* MenuViewcontroller.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -142,6 +150,8 @@
 		93933F6D1C515F6E0029510E /* TeamR_RealTimeDisplay */ = {
 			isa = PBXGroup;
 			children = (
+				93C30D551C643100001CF279 /* SWRevealViewController.h */,
+				93C30D561C643100001CF279 /* SWRevealViewController.m */,
 				934DFC3E1C63946600AC3A0A /* CBAutoScrollLabel.h */,
 				934DFC3F1C63946600AC3A0A /* CBAutoScrollLabel.m */,
 				9363AF6C1C600CAE00125650 /* Controller */,
@@ -381,6 +391,8 @@
 				93933F701C515F6E0029510E /* main.m in Sources */,
 				93933F7C1C515F6E0029510E /* TeamR_RealTimeDisplay.xcdatamodeld in Sources */,
 				934DFC401C63946600AC3A0A /* CBAutoScrollLabel.m in Sources */,
+				93C30D591C643160001CF279 /* MenuViewcontroller.m in Sources */,
+				93C30D571C643100001CF279 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,6 +16,7 @@
 
 @property (weak, nonatomic) IBOutlet CBAutoScrollLabel *urgentMessage;
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *barButton;
 
 
 
