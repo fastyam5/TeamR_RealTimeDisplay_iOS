@@ -12,7 +12,7 @@
 		93933F701C515F6E0029510E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93933F6F1C515F6E0029510E /* main.m */; };
 		93933F731C515F6E0029510E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93933F721C515F6E0029510E /* AppDelegate.m */; };
 		93933F761C515F6E0029510E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93933F751C515F6E0029510E /* ViewController.m */; };
-		93933F791C515F6E0029510E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93933F771C515F6E0029510E /* Main.storyboard */; };
+		93933F791C515F6E0029510E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93933F771C515F6E0029510E /* Main.storyboard */; settings = {ASSET_TAGS = (1, ); }; };
 		93933F7C1C515F6E0029510E /* TeamR_RealTimeDisplay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 93933F7A1C515F6E0029510E /* TeamR_RealTimeDisplay.xcdatamodeld */; };
 		93933F7E1C515F6E0029510E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93933F7D1C515F6E0029510E /* Assets.xcassets */; };
 		93933F811C515F6E0029510E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93933F7F1C515F6E0029510E /* LaunchScreen.storyboard */; };
@@ -266,6 +266,9 @@
 		93933F631C515F6E0029510E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					1,
+				);
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Darin McCarren";
 				TargetAttributes = {
