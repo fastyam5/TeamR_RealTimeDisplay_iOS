@@ -18,6 +18,10 @@
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *barButton;
 
+@property (nonatomic, retain) CLLocationManager *locationManager;
+
+@property (weak, nonatomic) IBOutlet UIButton *findMe;
+
 
 
 @end
