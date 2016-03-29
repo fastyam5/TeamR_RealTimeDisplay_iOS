@@ -352,7 +352,8 @@
     // Add label if label text was set
     if (nil != self.labelText) {
         // Get size of label text
-        CGSize dims = [self.labelText sizeWithFont:self.labelFont];
+        //CGSize dims = [self.labelText sizeWithFont:self.labelFont];
+        CGSize dims = [self.labelText sizeWithAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica" size:12]}];
         // Compute label dimensions based on font metrics if size is larger than max then clip the label width
         float lHeight = dims.height;
         float lWidth;

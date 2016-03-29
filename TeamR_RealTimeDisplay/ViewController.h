@@ -20,7 +20,8 @@
 
 @property (nonatomic, retain) CLLocationManager *locationManager;
 
-@property (weak, nonatomic) IBOutlet UIButton *findMe;
+
+
 
 
 

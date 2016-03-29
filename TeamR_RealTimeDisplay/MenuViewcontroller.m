@@ -4,7 +4,7 @@
 //
 //  Created by Darin McCarren on 2/4/16.
 //  Copyright © 2016 Darin McCarren. All rights reserved.
-//
+// ID Lat long name department 
 
 #import "MenuViewcontroller.h"
 #import "ViewController.h"
@@ -22,7 +22,7 @@
     if ( [sender isKindOfClass:[UITableViewCell class]] )
     {
         
-        UILabel* c = [(SWUITableViewCell *)sender label];
+        //UILabel* c = [(SWUITableViewCell *)sender label];
         UINavigationController *navController = segue.destinationViewController;
         ViewController* cvc = [navController childViewControllers].firstObject;
         if ( [cvc isKindOfClass:[ViewController class]] )
@@ -31,7 +31,6 @@
         }
     }
 }
-
 
 #pragma mark - Table view data source
 
@@ -42,7 +41,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -71,7 +70,7 @@
         }
     }
     //assetList will hold the assest filtering list that will be dynamic
-    NSMutableArray *assetList = [NSMutableArray arrayWithObjects:@"Type",@"Department",@"Status",  nil];
+    NSMutableArray *assetList = [NSMutableArray arrayWithObjects:@"Type",@"Department",@"Status",@"Hello" ,  nil];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: CellIdentifier forIndexPath: indexPath];
     UILabel *lblTemp1 = (UILabel *)[cell viewWithTag:1];
     UILabel *lblTemp2 = (UILabel *)[cell viewWithTag:2];

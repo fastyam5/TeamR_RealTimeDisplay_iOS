@@ -33,7 +33,6 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {   // tell textField to do something when the "return" button
     // is pressed on the keyboard
- 
     [textField resignFirstResponder];
     [self.view endEditing:YES];
     return YES;
@@ -46,26 +45,17 @@
         //UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Correct Password" message:@"The password is correct" delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles: nil];
         //[alert show];
         //Step 1: Create a UIAlertController
-        UIAlertController *myAlertController = [UIAlertController alertControllerWithTitle:@"Correct Password"
-                                                                                   message: @"You entered the correct password."
-                                                                            preferredStyle:UIAlertControllerStyleAlert                   ];
+        UIAlertController *myAlertController = [UIAlertController alertControllerWithTitle:@"Correct Password" message: @"You entered the correct password." preferredStyle:UIAlertControllerStyleAlert];
         
         //Step 2: Create a UIAlertAction that can be added to the alert
-        UIAlertAction* ok = [UIAlertAction
-                             actionWithTitle:@"OK"
-                             style:UIAlertActionStyleDefault
-                             handler:^(UIAlertAction * action)
-                             {
-                                 //Do some thing here, eg dismiss the alertwindow
-                                 [myAlertController dismissViewControllerAnimated:YES completion:nil];
-                                 
-                             }];
+        UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action)
+                             {//dismiss the alertwindow
+                             [myAlertController dismissViewControllerAnimated:YES completion:nil];}];
         
         //Step 3: Add the UIAlertAction ok that we just created to our AlertController
         [myAlertController addAction: ok];
         
         //Step 4: If password is correct move to the mapView
-        
         [self performSegueWithIdentifier:@"showMap" sender:nil];
     }
     else
@@ -73,20 +63,12 @@
         //UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Wrong Password" message:@"The password is incorrect" delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles: nil];
         //[alert show];
         //Step 1: Create a UIAlertController
-        UIAlertController *myAlertController = [UIAlertController alertControllerWithTitle:@"Wrong password"
-                                                                                   message: @"You entered the wrong password"
-                                                                            preferredStyle:UIAlertControllerStyleAlert                   ];
+        UIAlertController *myAlertController = [UIAlertController alertControllerWithTitle:@"Wrong password" message: @"You entered the wrong password" preferredStyle:UIAlertControllerStyleAlert];
         
         //Step 2: Create a UIAlertAction that can be added to the alert
-        UIAlertAction* ok = [UIAlertAction
-                             actionWithTitle:@"OK"
-                             style:UIAlertActionStyleDefault
-                             handler:^(UIAlertAction * action)
-                             {
-                                 //Do some thing here, eg dismiss the alertwindow
-                                 [myAlertController dismissViewControllerAnimated:YES completion:nil];
-                                 
-                             }];
+        UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action)
+                             {//dismiss the alertwindow
+                             [myAlertController dismissViewControllerAnimated:YES completion:nil];}];
         
         //Step 3: Add the UIAlertAction ok that we just created to our AlertController
         [myAlertController addAction: ok];
