@@ -77,6 +77,7 @@
     if(!_assetData) _assetData = [[NSMutableArray alloc]init];
     return _assetData;
 }
+#pragma Fetch
 
 -(void)fetchAssestData
 {
@@ -97,6 +98,8 @@
     {
         //Do nothing
     }
+    
+    NSLog(@"Fetched Data");
     
 }
 
@@ -201,7 +204,7 @@
 {
     
     [HUD showUIBlockingIndicatorWithText:@"Updating Map"];
-    NSLog(@"Updated the map");
+    [self fetchAssestData];
     
     for (int i = 0; i < _assetData.count; i++)
     {
@@ -241,7 +244,8 @@
 
         
     }
-
+    
+    NSLog(@"Updated the map");
     
     
     [HUD hideUIBlockingIndicator];

@@ -197,10 +197,10 @@
             </objects>
             <point key="canvasLocation" x="1565" y="12"/>
         </scene>
-        <!--Login View Controller-->
+        <!--loginScreen-->
         <scene sceneID="5J4-dp-MBK">
             <objects>
-                <viewController storyboardIdentifier="ViewController" id="bi8-b4-DIM" customClass="loginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" title="loginScreen" id="bi8-b4-DIM" customClass="loginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BGJ-ol-QLR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

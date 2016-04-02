@@ -19,8 +19,15 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     [GMSServices provideAPIKey:@"AIzaSyCQ2fuqmX9coLyjQ46vmr6UkFIR_-2ZqnE"];
+    
+    
     // Override point for customization after application launch.
     return YES;
+}
+
+-(void) showLoginScreen:(BOOL)animated
+{
+
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
