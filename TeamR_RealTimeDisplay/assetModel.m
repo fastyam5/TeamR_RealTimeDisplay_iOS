@@ -11,6 +11,8 @@
 
 @implementation assetModel
 
+
+
 -(instancetype)initWithDepartment:(NSString *)assestdepart ID:(int)assetID Latiude:(NSString *)assetLat Longitude:(NSString *)assetLong Name:(NSString *)assetName
 {
     self = [super init];

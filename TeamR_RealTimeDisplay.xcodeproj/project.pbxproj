@@ -355,7 +355,7 @@
 				KnownAssetTags = (
 					1,
 				);
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Darin McCarren";
 				TargetAttributes = {
 					93933F6A1C515F6E0029510E = {
@@ -680,7 +680,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "WSU.TeamR-RealTimeDisplay";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos9.3;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -730,7 +730,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "WSU.TeamR-RealTimeDisplay";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos9.3;
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};

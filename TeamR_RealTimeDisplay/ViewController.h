@@ -12,6 +12,9 @@
 
 @interface ViewController : UIViewController
 
+@property (strong, nonatomic) NSMutableArray* assetData;
+@property (strong, nonatomic) NSDictionary* assets;
+
 @property (strong, nonatomic) IBOutlet GMSMapView *mapView;
 
 @property (weak, nonatomic) IBOutlet CBAutoScrollLabel *urgentMessage;

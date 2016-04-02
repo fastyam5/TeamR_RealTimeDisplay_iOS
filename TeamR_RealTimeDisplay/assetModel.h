@@ -6,7 +6,7 @@
 //  Copyright © 2016 Darin McCarren. All rights reserved.
 //
 //  ID Lat long name department
-#import "JSONModel.h"
+#import <UIKit/UIKit.h>
 
 
 @interface assetModel: NSObject
@@ -20,7 +20,7 @@
 @property (nonatomic, assign) NSString* assetName;
 @property (nonatomic, assign) NSString* assetDepart;
 
-@property (strong, nonatomic) NSArray<assetModel *>* assets;
+@property (strong, nonatomic) NSMutableArray <assetModel *>* assets;
 
 
 

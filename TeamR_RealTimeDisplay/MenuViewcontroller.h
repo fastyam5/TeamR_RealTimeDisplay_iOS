@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ViewController.h"
 
 @interface SWUITableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *label3;
