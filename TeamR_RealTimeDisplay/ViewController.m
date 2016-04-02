@@ -6,11 +6,12 @@
 //  Copyright © 2016 Darin McCarren. All rights reserved.
 //
 
-#define JSON_URL @"http://groupq.cs.wright.edu/test.php"
+//#define JSON_URL  @"http://groupq.cs.wright.edu/test.php"
 
 #import "ViewController.h"
 #import "CBAutoScrollLabel.h"
 #import "SWRevealViewController.h"
+#import "settingViewController.h"
 #import "assetModel.h"
 @import GoogleMaps;
 #import "HUD.h"
@@ -18,7 +19,7 @@
 
 @interface ViewController ()
 
-
+@property (nonatomic, strong) settingViewController *setViewController;
 
 @end
 
@@ -36,6 +37,8 @@
     // Do any additional setup after loading the view, typically from a nib.
     // Create a GMSCameraPosition that tells the map to display the
     // coordinate -33.86,151.20 at zoom level 6.
+    
+    _setViewController.url.text = @"http://groupq.cs.wright.edu/test.php";
     
     [HUD showUIBlockingIndicatorWithText:@"Fetching Data"];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
@@ -64,12 +67,19 @@
 {
     SWRevealViewController *revealViewController = self.revealViewController;
     
-    if ( revealViewController )
+    
+    if (revealViewController)
     {
         [self.barButton setTarget: self.revealViewController];
         [self.barButton setAction: @selector(revealToggle:)];
         [self.navigationController.navigationBar addGestureRecognizer: self.revealViewController.panGestureRecognizer];
     }
+    
+    
+//    if()
+//    {
+//        
+//    }
     
 }
 
@@ -81,9 +91,16 @@
 
 -(void)fetchAssestData
 {
+    
+    
+    
+    NSLog(@"Url Text box %@",_setViewController.url.text);
+    
+    NSString *url = @"http://groupq.cs.wright.edu/test.php";
+;
     //http://groupq.cs.wright.edu/test.php
     NSError *error = nil;
-    NSURL *assestURL = [NSURL URLWithString:JSON_URL];
+    NSURL *assestURL = [NSURL URLWithString:url];
     NSData *jsonData = [NSData dataWithContentsOfURL:assestURL];
     NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
         NSLog(@"dataDicionary %@",dataDictionary);
