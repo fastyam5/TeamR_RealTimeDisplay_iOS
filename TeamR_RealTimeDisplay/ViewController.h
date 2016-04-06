@@ -22,6 +22,8 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *barButton;
 
 @property (nonatomic, retain) CLLocationManager *locationManager;
+@property (nonatomic, assign) NSInteger indexPath;
+
 
 
 

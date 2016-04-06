@@ -18,6 +18,7 @@
 		932F83BD1C91B64C0077A566 /* JSONModel+networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 932F83BA1C91B64C0077A566 /* JSONModel+networking.m */; };
 		932F83C21C91B6560077A566 /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 932F83BF1C91B6560077A566 /* JSONKeyMapper.m */; };
 		932F83C31C91B6560077A566 /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 932F83C11C91B6560077A566 /* JSONValueTransformer.m */; };
+		933793D41CB3EA860096B8E6 /* RTCDlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 933793D31CB3EA860096B8E6 /* RTCDlogo.png */; };
 		9340CD931CB057170015BA59 /* icon-ios7-gear-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 9340CD921CB057170015BA59 /* icon-ios7-gear-128.png */; };
 		9340CD9C1CB061690015BA59 /* settingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9340CD9B1CB061690015BA59 /* settingViewController.m */; };
 		934DFC401C63946600AC3A0A /* CBAutoScrollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 934DFC3F1C63946600AC3A0A /* CBAutoScrollLabel.m */; };
@@ -83,6 +84,7 @@
 		932F83BF1C91B6560077A566 /* JSONKeyMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKeyMapper.m; sourceTree = "<group>"; };
 		932F83C01C91B6560077A566 /* JSONValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONValueTransformer.h; sourceTree = "<group>"; };
 		932F83C11C91B6560077A566 /* JSONValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONValueTransformer.m; sourceTree = "<group>"; };
+		933793D31CB3EA860096B8E6 /* RTCDlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RTCDlogo.png; sourceTree = "<group>"; };
 		9340CD921CB057170015BA59 /* icon-ios7-gear-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-ios7-gear-128.png"; sourceTree = "<group>"; };
 		9340CD9A1CB061690015BA59 /* settingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settingViewController.h; sourceTree = "<group>"; };
 		9340CD9B1CB061690015BA59 /* settingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingViewController.m; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 		93933F6E1C515F6E0029510E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				933793D31CB3EA860096B8E6 /* RTCDlogo.png */,
 				932F83B01C91B6130077A566 /* JSONModel */,
 				93D605BC1C640F9D00E82DAD /* reveal-icon.png */,
 				9340CD921CB057170015BA59 /* icon-ios7-gear-128.png */,
@@ -412,6 +415,7 @@
 				93933F7E1C515F6E0029510E /* Assets.xcassets in Resources */,
 				93933F791C515F6E0029510E /* Main.storyboard in Resources */,
 				9340CD931CB057170015BA59 /* icon-ios7-gear-128.png in Resources */,
+				933793D41CB3EA860096B8E6 /* RTCDlogo.png in Resources */,
 				93D605BD1C640F9D00E82DAD /* reveal-icon.png in Resources */,
 				93710DC41C7CE7C40066B916 /* btnCheck.png in Resources */,
 			);

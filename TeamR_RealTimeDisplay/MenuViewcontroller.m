@@ -7,8 +7,9 @@
 // ID Lat long name department 
 
 #import "MenuViewcontroller.h"
-#import "ViewController.h"
 #import "assetModel.h"
+#import "ViewController.h"
+#import "AppDelegate.h"
 
 
 
@@ -19,21 +20,7 @@
 
 
 
-- (void) prepareForSegue: (UIStoryboardSegue *) segue sender: (id) sender
-{
-    // configure the destination view controller:
-    if ( [sender isKindOfClass:[UITableViewCell class]] )
-    {
-        
-        //UILabel* c = [(SWUITableViewCell *)sender label];
-        UINavigationController *navController = segue.destinationViewController;
-        ViewController* cvc = [navController childViewControllers].firstObject;
-        if ( [cvc isKindOfClass:[ViewController class]] )
-        {
-            
-        }
-    }
-}
+
 
 #pragma mark - Table view data source
 
@@ -45,7 +32,6 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    ViewController *mainViewController = [[ ViewController alloc]init];
     return 5;
 }
 
@@ -100,6 +86,38 @@
     return cell;
    
     
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    NSIndexPath *path = indexPath;
+    NSInteger theInteger = path.row + 1;
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+      UITableViewCell *thisCell = [tableView cellForRowAtIndexPath:indexPath];
+    
+    if (indexPath.row == 0)
+    {
+        appDelegate.numPressed = theInteger;
+    }
+    if (indexPath.row == 1)
+    {
+        appDelegate.numPressed = theInteger;
+        
+    }
+    if (indexPath.row == 2)
+    {
+       appDelegate.numPressed = theInteger;
+    }
+    if (indexPath.row == 3)
+    {
+        appDelegate.numPressed = theInteger;
+    }
+    if (indexPath.row == 4)
+    {
+       appDelegate.numPressed = theInteger;
+    }
+  
 }
 
 #pragma mark state preservation / restoration

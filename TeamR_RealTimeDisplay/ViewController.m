@@ -15,18 +15,18 @@
 #import "assetModel.h"
 @import GoogleMaps;
 #import "HUD.h"
+#import "AppDelegate.h"
 
 
 @interface ViewController ()
 
 @property (nonatomic, strong) settingViewController *setViewController;
 
+
 @end
 
 @implementation ViewController
-{
- 
-}
+@synthesize indexPath;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -38,12 +38,15 @@
     // Create a GMSCameraPosition that tells the map to display the
     // coordinate -33.86,151.20 at zoom level 6.
     
+    
+  
     _setViewController.url.text = @"http://groupq.cs.wright.edu/test.php";
     
     [HUD showUIBlockingIndicatorWithText:@"Fetching Data"];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     [self fetchAssestData];
     [HUD hideUIBlockingIndicator];
+
     
     [HUD showUIBlockingIndicatorWithText:@"Populating map"];
     // Call to initialize map
@@ -52,14 +55,14 @@
     [self scrollText];
     // Call custom Setup for the top of the application
     [self customSetup];
+
     [HUD hideUIBlockingIndicator];
-//    for(NSArray *subArray in _assetData) {
-//        NSLog(@"Array in myArray: %@",subArray);
-//    }
+    
+   
+
     
     NSTimer* myTimer = [NSTimer scheduledTimerWithTimeInterval: 60.0 target: self selector: @selector(googleMapsUpdate:) userInfo: nil repeats: YES];
-    
-    
+    NSTimer* myTimer2 = [NSTimer scheduledTimerWithTimeInterval: 0.1 target: self selector: @selector(assetFilter:) userInfo: nil repeats: YES];
     
 }
 
@@ -83,6 +86,134 @@
     
 }
 
+- (void)assetFilter:(NSTimer*) t
+{
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    
+    switch (appDelegate.numPressed) {
+        case 1:
+            [_mapView clear];
+            for (int i = 0; i < _assetData.count; i++)
+            {
+                _assets = [_assetData objectAtIndex:i];
+                NSNumber* lat = [_assets objectForKey:@"Latitude"];
+                double xlat = [lat doubleValue];
+                NSNumber* longitude = [_assets objectForKey:@"Longitude"];
+                double xlongitude = [longitude doubleValue];
+                NSString *name = [_assets objectForKey:@"Name"];
+                NSString *depart = [_assets objectForKey:@"Department"];
+                GMSMarker *marker = [[GMSMarker alloc] init];
+                // if to change color of markers according to the department type
+                if([depart  containsString: @"Fire"])
+                {
+                    marker.position = CLLocationCoordinate2DMake(xlat , xlongitude);
+                    marker.map = self.mapView;
+                    marker.title = name;
+                    marker.snippet = depart;
+                    marker.icon = [GMSMarker markerImageWithColor:[UIColor redColor]];
+                }
+            }
+
+            break;
+            case 2:
+            [_mapView clear];
+            for (int i = 0; i < _assetData.count; i++)
+            {
+                _assets = [_assetData objectAtIndex:i];
+                NSNumber* lat = [_assets objectForKey:@"Latitude"];
+                double xlat = [lat doubleValue];
+                NSNumber* longitude = [_assets objectForKey:@"Longitude"];
+                double xlongitude = [longitude doubleValue];
+                NSString *name = [_assets objectForKey:@"Name"];
+                NSString *depart = [_assets objectForKey:@"Department"];
+                GMSMarker *marker = [[GMSMarker alloc] init];
+                // if to change color of markers according to the department type
+                if([depart  containsString: @"Police"])
+                {
+                    marker.position = CLLocationCoordinate2DMake(xlat , xlongitude);
+                    marker.map = self.mapView;
+                    marker.title = name;
+                    marker.snippet = depart;
+                    marker.icon = [GMSMarker markerImageWithColor:[UIColor blueColor]];
+                }
+            }
+            break;
+            case 3:
+            [_mapView clear];
+            for (int i = 0; i < _assetData.count; i++)
+            {
+                _assets = [_assetData objectAtIndex:i];
+                NSNumber* lat = [_assets objectForKey:@"Latitude"];
+                double xlat = [lat doubleValue];
+                NSNumber* longitude = [_assets objectForKey:@"Longitude"];
+                double xlongitude = [longitude doubleValue];
+                NSString *name = [_assets objectForKey:@"Name"];
+                NSString *depart = [_assets objectForKey:@"Department"];
+                GMSMarker *marker = [[GMSMarker alloc] init];
+                // if to change color of markers according to the department type
+                if([depart  containsString: @"EMS"])
+                {
+                    marker.position = CLLocationCoordinate2DMake(xlat , xlongitude);
+                    marker.map = self.mapView;
+                    marker.title = name;
+                    marker.snippet = depart;
+                    marker.icon = [GMSMarker markerImageWithColor:[UIColor greenColor]];
+                }
+            }
+            break;
+            case 4:
+            [_mapView clear];
+            for (int i = 0; i < _assetData.count; i++)
+            {
+                _assets = [_assetData objectAtIndex:i];
+                NSNumber* lat = [_assets objectForKey:@"Latitude"];
+                double xlat = [lat doubleValue];
+                NSNumber* longitude = [_assets objectForKey:@"Longitude"];
+                double xlongitude = [longitude doubleValue];
+                NSString *name = [_assets objectForKey:@"Name"];
+                NSString *depart = [_assets objectForKey:@"Department"];
+                GMSMarker *marker = [[GMSMarker alloc] init];
+                // if to change color of markers according to the department type
+                if([depart  containsString: @"FBI"])
+                {
+                    marker.position = CLLocationCoordinate2DMake(xlat , xlongitude);
+                    marker.map = self.mapView;
+                    marker.title = name;
+                    marker.snippet = depart;
+                    marker.icon = [GMSMarker markerImageWithColor:[UIColor blackColor]];
+                }
+            }
+            break;
+            case 5:
+            [_mapView clear];
+            for (int i = 0; i < _assetData.count; i++)
+            {
+                _assets = [_assetData objectAtIndex:i];
+                NSNumber* lat = [_assets objectForKey:@"Latitude"];
+                double xlat = [lat doubleValue];
+                NSNumber* longitude = [_assets objectForKey:@"Longitude"];
+                double xlongitude = [longitude doubleValue];
+                NSString *name = [_assets objectForKey:@"Name"];
+                NSString *depart = [_assets objectForKey:@"Department"];
+                GMSMarker *marker = [[GMSMarker alloc] init];
+                // if to change color of markers according to the department type
+                if([depart  containsString: @"EPA"])
+                {
+                    marker.position = CLLocationCoordinate2DMake(xlat , xlongitude);
+                    marker.map = self.mapView;
+                    marker.title = name;
+                    marker.snippet = depart;
+                    marker.icon = [GMSMarker markerImageWithColor:[UIColor yellowColor]];
+                }
+            }
+            break;
+        default:
+            break;
+    }
+
+
+}
+
 -(NSMutableArray *)objectHolderArray{
     if(!_assetData) _assetData = [[NSMutableArray alloc]init];
     return _assetData;
@@ -103,7 +234,7 @@
     NSURL *assestURL = [NSURL URLWithString:url];
     NSData *jsonData = [NSData dataWithContentsOfURL:assestURL];
     NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
-        NSLog(@"dataDicionary %@",dataDictionary);
+    
     
     if ([dataDictionary isKindOfClass:[NSDictionary class]])
     {
@@ -192,19 +323,19 @@
         marker.title = name;
         marker.snippet = depart;
         // if to change color of markers according to the department type
-        if([depart  isEqual: @"Fire Department"])
+        if([depart containsString: @"Fire"])
         {
             marker.icon = [GMSMarker markerImageWithColor:[UIColor redColor]];
         }
-        else if ([depart  isEqual: @"Police Department"])
+        else if ([depart containsString: @"Police"])
         {
             marker.icon = [GMSMarker markerImageWithColor:[UIColor blueColor]];
         }
-        else if ([depart  isEqual: @"EMS"])
+        else if ([depart containsString: @"EMS"])
         {
             marker.icon = [GMSMarker markerImageWithColor:[UIColor greenColor]];
         }
-        else if ([depart  isEqual: @"FBI"])
+        else if ([depart containsString: @"FBI"])
         {
             marker.icon = [GMSMarker markerImageWithColor:[UIColor blackColor]];
         }

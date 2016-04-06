@@ -62,6 +62,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="9MY-db-ito" kind="modal" id="DJ3-Y2-0F5"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="map" textLabel="0BV-d9-E50" style="IBUITableViewCellStyleDefault" id="TQC-sJ-hkG" customClass="SWUITableViewCell">
                                 <rect key="frame" x="0.0" y="66" width="320" height="44"/>
@@ -83,6 +86,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="9MY-db-ito" kind="modal" id="dIH-wt-8OM"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="red" textLabel="Geh-j1-obN" style="IBUITableViewCellStyleDefault" id="yhP-vp-mAP" userLabel="Department" customClass="SWUITableViewCell">
                                 <rect key="frame" x="0.0" y="110" width="320" height="44"/>
@@ -104,6 +110,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="9MY-db-ito" kind="modal" id="pgr-AZ-aM7"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="purple" textLabel="ZyT-oP-qru" style="IBUITableViewCellStyleDefault" id="1Yp-I6-Lti" customClass="SWUITableViewCell">
                                 <rect key="frame" x="0.0" y="154" width="320" height="44"/>
@@ -126,6 +135,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="9MY-db-ito" kind="modal" id="4gl-ee-bd2"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="black" textLabel="Xhn-aU-y0D" style="IBUITableViewCellStyleDefault" id="IIX-vB-mkd" customClass="SWUITableViewCell">
                                 <rect key="frame" x="0.0" y="198" width="320" height="44"/>
@@ -148,6 +160,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="9MY-db-ito" kind="modal" id="tpQ-bq-zM7"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -267,10 +282,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XoX-RX-PIS">
-                                <rect key="frame" x="137" y="323" width="46" height="30"/>
+                                <rect key="frame" x="137" y="454" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login">
-                                    <color key="titleColor" red="0.075610915639999998" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonPressed:" destination="bi8-b4-DIM" eventType="touchUpInside" id="H2D-Y1-yP7"/>
@@ -278,7 +293,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" id="hTZ-wX-yWh">
-                                <rect key="frame" x="34" y="269" width="253" height="30"/>
+                                <rect key="frame" x="34" y="390" width="253" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -287,7 +302,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" id="gLi-5t-5Q4">
-                                <rect key="frame" x="34" y="199" width="253" height="30"/>
+                                <rect key="frame" x="34" y="342" width="253" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -295,8 +310,12 @@
                                     <outlet property="delegate" destination="bi8-b4-DIM" id="KxW-zN-ebV"/>
                                 </connections>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RTCDlogo.png" id="qDW-dd-ckj">
+                                <rect key="frame" x="86" y="167" width="148" height="146"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.53417457459999995" green="0.091473147889999995" blue="0.1079964423" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.97705333770000002" green="0.97705333770000002" blue="0.97705333770000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.0" green="0.0048797575190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="xfa-mJ-WCS"/>
@@ -313,10 +332,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="RTCDlogo.png" width="407" height="407"/>
         <image name="icon-ios7-gear-128.png" width="22" height="22"/>
         <image name="reveal-icon.png" width="22" height="17"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ati-GI-LhY"/>
+        <segue reference="dIH-wt-8OM"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ViewController.h"
+
 
 @interface SWUITableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *label3;
 @property (weak, nonatomic) IBOutlet UILabel *label2;
 @property (weak, nonatomic) IBOutlet UILabel *label1;
 @property (nonatomic) IBOutlet UILabel *label;
+
 @end
 
 @interface MenuViewcontroller : UITableViewController

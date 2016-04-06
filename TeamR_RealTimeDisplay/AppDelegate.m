@@ -15,6 +15,8 @@
 
 @implementation AppDelegate
 
+@synthesize numPressed;
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
