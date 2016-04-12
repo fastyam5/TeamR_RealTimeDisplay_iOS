@@ -16,6 +16,11 @@
 @implementation AppDelegate
 
 @synthesize numPressed;
+@synthesize isPressed1;
+@synthesize isPressed2;
+@synthesize isPressed3;
+@synthesize isPressed4;
+@synthesize isPressed5;
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

@@ -94,28 +94,78 @@
     NSIndexPath *path = indexPath;
     NSInteger theInteger = path.row + 1;
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-      UITableViewCell *thisCell = [tableView cellForRowAtIndexPath:indexPath];
     
     if (indexPath.row == 0)
     {
-        appDelegate.numPressed = theInteger;
+        if (appDelegate.isPressed1 == false)
+        {
+            appDelegate.numPressed = theInteger;
+            appDelegate.isPressed1 = true;
+        }
+        else
+        {
+            appDelegate.numPressed = theInteger;
+            appDelegate.isPressed1 = false;
+
+        }
+        
     }
     if (indexPath.row == 1)
     {
-        appDelegate.numPressed = theInteger;
+        if (appDelegate.isPressed2 == false)
+        {
+            appDelegate.numPressed = theInteger;
+            appDelegate.isPressed2 = true;
+        }
+        else
+        {
+            appDelegate.numPressed = theInteger;
+            appDelegate.isPressed2 = false;
+            
+        }
         
     }
     if (indexPath.row == 2)
     {
-       appDelegate.numPressed = theInteger;
+        if (appDelegate.isPressed3 == false)
+        {
+            appDelegate.numPressed = theInteger;
+            appDelegate.isPressed3 = true;
+        }
+        else
+        {
+            appDelegate.numPressed = theInteger;
+            appDelegate.isPressed3 = false;
+            
+        }
     }
     if (indexPath.row == 3)
     {
-        appDelegate.numPressed = theInteger;
+        if (appDelegate.isPressed4 == false)
+        {
+            appDelegate.numPressed = theInteger;
+            appDelegate.isPressed4 = true;
+        }
+        else
+        {
+            appDelegate.numPressed = theInteger;
+            appDelegate.isPressed4 = false;
+            
+        }
     }
     if (indexPath.row == 4)
     {
-       appDelegate.numPressed = theInteger;
+        if (appDelegate.isPressed5 == false)
+        {
+            appDelegate.numPressed = theInteger;
+            appDelegate.isPressed5 = true;
+        }
+        else
+        {
+            appDelegate.numPressed = theInteger;
+            appDelegate.isPressed5 = false;
+            
+        }
     }
   
 }

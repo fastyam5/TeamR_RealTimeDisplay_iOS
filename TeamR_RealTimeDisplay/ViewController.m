@@ -92,6 +92,10 @@
     
     switch (appDelegate.numPressed) {
         case 1:
+            if (appDelegate.isPressed1 == true)
+            {
+                
+            
             [_mapView clear];
             for (int i = 0; i < _assetData.count; i++)
             {
@@ -113,9 +117,17 @@
                     marker.icon = [GMSMarker markerImageWithColor:[UIColor redColor]];
                 }
             }
-
+            }
+            else
+            {
+                [_mapView clear];
+                [self googleMapsInitWithoutTimer];
+            }
             break;
             case 2:
+            if (appDelegate.isPressed2 == true)
+            {
+
             [_mapView clear];
             for (int i = 0; i < _assetData.count; i++)
             {
@@ -137,8 +149,18 @@
                     marker.icon = [GMSMarker markerImageWithColor:[UIColor blueColor]];
                 }
             }
+            }
+            else
+            {
+                [_mapView clear];
+                [self googleMapsInitWithoutTimer];
+            }
+
             break;
             case 3:
+            if (appDelegate.isPressed3 == true)
+            {
+
             [_mapView clear];
             for (int i = 0; i < _assetData.count; i++)
             {
@@ -160,8 +182,18 @@
                     marker.icon = [GMSMarker markerImageWithColor:[UIColor greenColor]];
                 }
             }
+            }
+            else
+            {
+                [_mapView clear];
+                [self googleMapsInitWithoutTimer];
+            }
+
             break;
             case 4:
+            if (appDelegate.isPressed4 == true)
+            {
+
             [_mapView clear];
             for (int i = 0; i < _assetData.count; i++)
             {
@@ -183,8 +215,18 @@
                     marker.icon = [GMSMarker markerImageWithColor:[UIColor blackColor]];
                 }
             }
+            }
+            else
+            {
+                [_mapView clear];
+                [self googleMapsInitWithoutTimer];
+            }
+
             break;
             case 5:
+            if (appDelegate.isPressed5 == true)
+            {
+
             [_mapView clear];
             for (int i = 0; i < _assetData.count; i++)
             {
@@ -206,6 +248,13 @@
                     marker.icon = [GMSMarker markerImageWithColor:[UIColor yellowColor]];
                 }
             }
+            }
+            else
+            {
+                [_mapView clear];
+                [self googleMapsInitWithoutTimer];
+            }
+
             break;
         default:
             break;
@@ -347,6 +396,73 @@
     }
     
 }
+
+-(void)googleMapsInitWithoutTimer
+{
+    [_mapView clear];
+    for (int i = 0; i < _assetData.count; i++)
+    {
+        _assets = [_assetData objectAtIndex:i];
+        NSNumber* lat = [_assets objectForKey:@"Latitude"];
+        double xlat = [lat doubleValue];
+        NSNumber* longitude = [_assets objectForKey:@"Longitude"];
+        double xlongitude = [longitude doubleValue];
+        NSString *name = [_assets objectForKey:@"Name"];
+        NSString *depart = [_assets objectForKey:@"Department"];
+        GMSMarker *marker = [[GMSMarker alloc] init];
+        // if to change color of markers according to the department type
+        if([depart  containsString: @"Fire"])
+        {
+            marker.position = CLLocationCoordinate2DMake(xlat , xlongitude);
+            marker.map = self.mapView;
+            marker.title = name;
+            marker.snippet = depart;
+            marker.icon = [GMSMarker markerImageWithColor:[UIColor redColor]];
+        }
+        
+        if([depart  containsString: @"Police"])
+        {
+            marker.position = CLLocationCoordinate2DMake(xlat , xlongitude);
+            marker.map = self.mapView;
+            marker.title = name;
+            marker.snippet = depart;
+            marker.icon = [GMSMarker markerImageWithColor:[UIColor blueColor]];
+        }
+        
+        if([depart  containsString: @"EMS"])
+        {
+            marker.position = CLLocationCoordinate2DMake(xlat , xlongitude);
+            marker.map = self.mapView;
+            marker.title = name;
+            marker.snippet = depart;
+            marker.icon = [GMSMarker markerImageWithColor:[UIColor greenColor]];
+        }
+        
+        if([depart  containsString: @"FBI"])
+        {
+            marker.position = CLLocationCoordinate2DMake(xlat , xlongitude);
+            marker.map = self.mapView;
+            marker.title = name;
+            marker.snippet = depart;
+            marker.icon = [GMSMarker markerImageWithColor:[UIColor blackColor]];
+        }
+        
+        if([depart  containsString: @"EPA"])
+        {
+            marker.position = CLLocationCoordinate2DMake(xlat , xlongitude);
+            marker.map = self.mapView;
+            marker.title = name;
+            marker.snippet = depart;
+            marker.icon = [GMSMarker markerImageWithColor:[UIColor yellowColor]];
+        }
+        
+        
+        
+        
+    }
+    
+}
+
 
 - (void)googleMapsUpdate:(NSTimer*) t
 {

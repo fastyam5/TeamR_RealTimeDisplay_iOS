@@ -13,6 +13,11 @@
 
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic) NSInteger numPressed;
+@property (nonatomic) BOOL isPressed1;
+@property (nonatomic) BOOL isPressed2;
+@property (nonatomic) BOOL isPressed3;
+@property (nonatomic) BOOL isPressed4;
+@property (nonatomic) BOOL isPressed5;
 
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
