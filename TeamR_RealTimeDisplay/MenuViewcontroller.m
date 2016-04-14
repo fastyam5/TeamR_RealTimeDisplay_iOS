@@ -32,7 +32,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return 6;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -44,13 +44,13 @@
     {
         case 0:
         {
-            CellIdentifier = @"map";
+            CellIdentifier = @"blue";
             break;
         }
             
         case 1:
         {
-            CellIdentifier = @"blue";
+            CellIdentifier = @"map";
             break;
         }
             
@@ -69,20 +69,36 @@
             CellIdentifier = @"black";
             break;
         }
+        case 5:
+        {
+            CellIdentifier = @"green";
+            break;
+        }
     }
     //assetList will hold the assest filtering list that will be dynamic
-    NSMutableArray *assetList = [NSMutableArray arrayWithObjects:@"Police Department",@"Fire Department",@"FBI",@"EMS", @"Other" , nil];
+    NSMutableArray *assetList = [NSMutableArray arrayWithObjects:@"All",@"Fire Department", @"Police Department", @"FBI",@"EMS", @"Other" , nil];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: CellIdentifier forIndexPath: indexPath];
     UILabel *lblTemp1 = (UILabel *)[cell viewWithTag:1];
     UILabel *lblTemp2 = (UILabel *)[cell viewWithTag:2];
     UILabel *lblTemp3 = (UILabel *)[cell viewWithTag:3];
     UILabel *lblTemp4 = (UILabel *)[cell viewWithTag:4];
     UILabel *lblTemp5 = (UILabel *)[cell viewWithTag:5];
+    UILabel *lblTemp6 = (UILabel *)[cell viewWithTag:6];
     lblTemp1.text = [assetList objectAtIndex:0];
     lblTemp2.text = [assetList objectAtIndex:1];
     lblTemp3.text = [assetList objectAtIndex:2];
     lblTemp4.text = [assetList objectAtIndex:3];
     lblTemp5.text = [assetList objectAtIndex:4];
+    lblTemp6.text = [assetList objectAtIndex:5];
+    
+    UIView *customColorView = [[UIView alloc] init];
+    customColorView.backgroundColor = [UIColor colorWithRed:180/255.0
+                                                      green:138/255.0
+                                                       blue:171/255.0
+                                                      alpha:0.5];
+    cell.selectedBackgroundView =  customColorView;
+    
+    
     return cell;
    
     
@@ -99,14 +115,14 @@
     {
         if (appDelegate.isPressed1 == false)
         {
-            appDelegate.numPressed = theInteger;
+            appDelegate.numPressed1 = theInteger;
             appDelegate.isPressed1 = true;
         }
         else
         {
-            appDelegate.numPressed = theInteger;
+            appDelegate.numPressed1 = theInteger;
             appDelegate.isPressed1 = false;
-
+            
         }
         
     }
@@ -114,12 +130,12 @@
     {
         if (appDelegate.isPressed2 == false)
         {
-            appDelegate.numPressed = theInteger;
+            appDelegate.numPressed2 = theInteger;
             appDelegate.isPressed2 = true;
         }
         else
         {
-            appDelegate.numPressed = theInteger;
+            appDelegate.numPressed2 = theInteger;
             appDelegate.isPressed2 = false;
             
         }
@@ -129,12 +145,12 @@
     {
         if (appDelegate.isPressed3 == false)
         {
-            appDelegate.numPressed = theInteger;
+            appDelegate.numPressed3 = theInteger;
             appDelegate.isPressed3 = true;
         }
-        else
-        {
-            appDelegate.numPressed = theInteger;
+       else
+       {
+            appDelegate.numPressed3 = theInteger;
             appDelegate.isPressed3 = false;
             
         }
@@ -143,12 +159,12 @@
     {
         if (appDelegate.isPressed4 == false)
         {
-            appDelegate.numPressed = theInteger;
+            appDelegate.numPressed4 = theInteger;
             appDelegate.isPressed4 = true;
         }
         else
         {
-            appDelegate.numPressed = theInteger;
+            appDelegate.numPressed4 = theInteger;
             appDelegate.isPressed4 = false;
             
         }
@@ -157,16 +173,31 @@
     {
         if (appDelegate.isPressed5 == false)
         {
-            appDelegate.numPressed = theInteger;
+            appDelegate.numPressed5 = theInteger;
             appDelegate.isPressed5 = true;
         }
         else
         {
-            appDelegate.numPressed = theInteger;
+            appDelegate.numPressed5 = theInteger;
             appDelegate.isPressed5 = false;
             
         }
     }
+    if (indexPath.row == 5)
+    {
+        if (appDelegate.isPressed6 == false)
+        {
+            appDelegate.numPressed6 = theInteger;
+            appDelegate.isPressed6 = true;
+        }
+        else 
+        {
+            appDelegate.numPressed6 = theInteger;
+            appDelegate.isPressed6 = false;
+            
+        }
+    }
+
   
 }
 

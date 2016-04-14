@@ -23,6 +23,11 @@
 
 @property (nonatomic, retain) CLLocationManager *locationManager;
 @property (nonatomic, assign) NSInteger indexPath;
+@property (nonatomic, assign) NSInteger numberForCase;
+
+@property NSTimer* myTimer;
+
+@property NSTimer* myTimer2;
 
 
 

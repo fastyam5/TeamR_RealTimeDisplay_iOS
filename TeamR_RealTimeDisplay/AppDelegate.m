@@ -15,12 +15,20 @@
 
 @implementation AppDelegate
 
-@synthesize numPressed;
+@synthesize numPressed1;
+@synthesize numPressed2;
+@synthesize numPressed3;
+@synthesize numPressed4;
+@synthesize numPressed5;
+@synthesize numPressed6;
+@synthesize url;
 @synthesize isPressed1;
 @synthesize isPressed2;
 @synthesize isPressed3;
 @synthesize isPressed4;
 @synthesize isPressed5;
+@synthesize isPressed6;
+@synthesize skip;
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

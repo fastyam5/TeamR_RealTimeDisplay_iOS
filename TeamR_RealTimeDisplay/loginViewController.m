@@ -16,6 +16,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSURL *scriptUrl = [NSURL URLWithString:@"http://www.google.com/"];
+    NSData *data = [NSData dataWithContentsOfURL:scriptUrl];
+    if (data)
+        NSLog(@"Device is connected to the Internet");
+    else
+    {
+        NSLog(@"Device is not connected to the Internet");
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Network Unavailable"
+                                                        message:@"App content may be limited without a network connection!"
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
+    
     _infodictionary = [NSDictionary dictionaryWithObjects:[NSArray arrayWithObjects:@"password", nil] forKeys:[NSArray arrayWithObjects:@"username", nil]];
     // Do any additional setup after loading the view, typically from a nib.
 }

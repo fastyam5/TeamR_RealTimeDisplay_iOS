@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3C8C5FCD1DEA22A09ED69E2D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06B779FF2F77A08A2704F9C0 /* libPods.a */; };
+		932D7B811CBD21D10067517A /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 932D7B801CBD21D10067517A /* Logo.png */; };
 		932F83AC1C91B5CE0077A566 /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 932F83A51C91B5CE0077A566 /* JSONModel.m */; };
 		932F83AD1C91B5CE0077A566 /* JSONModelArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 932F83A71C91B5CE0077A566 /* JSONModelArray.m */; };
 		932F83AE1C91B5CE0077A566 /* JSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 932F83A91C91B5CE0077A566 /* JSONModelClassProperty.m */; };
@@ -63,6 +64,7 @@
 		06B779FF2F77A08A2704F9C0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		39616FB16857AC12AA46CC72 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6316AA759C149E74AE3D12D2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		932D7B801CBD21D10067517A /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
 		932F83A41C91B5CE0077A566 /* JSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModel.h; sourceTree = "<group>"; };
 		932F83A51C91B5CE0077A566 /* JSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModel.m; sourceTree = "<group>"; };
 		932F83A61C91B5CE0077A566 /* JSONModelArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelArray.h; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				933793D31CB3EA860096B8E6 /* RTCDlogo.png */,
+				932D7B801CBD21D10067517A /* Logo.png */,
 				932F83B01C91B6130077A566 /* JSONModel */,
 				93D605BC1C640F9D00E82DAD /* reveal-icon.png */,
 				9340CD921CB057170015BA59 /* icon-ios7-gear-128.png */,
@@ -410,6 +413,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				932D7B811CBD21D10067517A /* Logo.png in Resources */,
 				93710DC51C7CE7C40066B916 /* btnCheck@2x.png in Resources */,
 				93933F811C515F6E0029510E /* LaunchScreen.storyboard in Resources */,
 				93933F7E1C515F6E0029510E /* Assets.xcassets in Resources */,
