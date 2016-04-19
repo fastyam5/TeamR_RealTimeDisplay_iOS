@@ -113,7 +113,7 @@
     if (_myTimer == nil)
     {
         __weak NSObject *weakSelf = self;
-        _myTimer = [NSTimer scheduledTimerWithTimeInterval: 60.0 target:weakSelf selector: @selector(googleMapsUpdate:) userInfo: nil repeats: YES];
+        _myTimer = [NSTimer scheduledTimerWithTimeInterval: 30.0 target:weakSelf selector: @selector(googleMapsUpdate:) userInfo: nil repeats: YES];
     }
     
    
@@ -504,7 +504,7 @@
     
     if(_assetData.count <= 100)
     {
-         zoom = 16;
+         zoom = 15;
           NSLog(@"Less than 100 assets");
     }
     else if (_assetData.count >= 100)
@@ -577,7 +577,7 @@
 - (void)googleMapsUpdate:(NSTimer*) t
 {
     
-    
+    [_mapView clear];
     [self fetchAssestData];
     
     for (int i = 0; i < _assetData.count; i++)
